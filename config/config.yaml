@@ -1,0 +1,16 @@
+app:
+  name: fire_eye
+  version: 1.1
+
+http:
+  port: 8080
+
+rpc:
+  network: tcp
+  port: 8081
+
+log:
+  level: info
+
+toplist:
+  host: https://uat-doc-openapi.toptastewin.com
