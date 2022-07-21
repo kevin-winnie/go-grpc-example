@@ -1,6 +1,6 @@
-module go-grpc-example
+module go-grpc
 
-go 1.18
+go 1.19
 
 require (
 	google.golang.org/grpc v1.48.0

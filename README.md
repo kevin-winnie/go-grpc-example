@@ -33,6 +33,6 @@ protoc --go_out=plugins=grpc:. *.proto
 
 
 //启动服务端
-go run ./service/service.go
+go run ./controller/rpc/service/service.go
 //启动客户端
-go run ./client/client.go
+go run ./controller/rpc/client/client.go
