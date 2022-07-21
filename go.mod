@@ -3,6 +3,7 @@ module go-grpc
 go 1.19
 
 require (
+	github.com/go-sql-driver/mysql v1.6.0
 	github.com/joho/godotenv v1.4.0
 	google.golang.org/grpc v1.48.0
 	google.golang.org/protobuf v1.28.0

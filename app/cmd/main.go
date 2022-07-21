@@ -4,7 +4,6 @@ import (
 	"github.com/joho/godotenv"
 	"go-grpc/config"
 	"go-grpc/internal/app"
-	_ "go-grpc/internal/app"
 	"log"
 )
 
