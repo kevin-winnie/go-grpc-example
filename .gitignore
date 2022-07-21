@@ -1,0 +1,8 @@
+# vendro目录
+vendor
+# 编辑器目录
+.idea
+.vscode
+# Mac .DS_Store
+.DS_Store
+
