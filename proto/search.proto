@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package proto;
+option go_package = "./search";
+
+service SearchService {
+  rpc Search(SearchRequest) returns (SearchResponse){}
+  rpc List(ListRequest) returns (ListResponse){}
+}
+
+message SearchRequest{
+  string request = 1;
+}
+
+message ListData {
+  string data = 1;
+  string startTime = 2;
+  string endTime = 3;
+}
+
+message ListRequest{
+  string projectCode = 1;
+  int32 productId = 2;
+}
+
+message ListResponse{
+  int32 code = 1;
+  string msg = 2;
+  ListData data = 3;
+  bool status = 4;
+}
+
+message SearchResponse{
+  string response = 1;
+}
+
+
+
+
