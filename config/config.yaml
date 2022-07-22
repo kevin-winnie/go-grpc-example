@@ -14,3 +14,7 @@ log:
 
 toplist:
   host: https://uat-doc-openapi.toptastewin.com
+
+mysql:
+    host: 200
+    name: 300

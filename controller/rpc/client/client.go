@@ -5,7 +5,7 @@ import (
 	"google.golang.org/grpc"
 	"log"
 )
-const PORT = "9001"
+const PORT = "9002"
 
 func main() {
 	conn, err := grpc.Dial(":"+PORT, grpc.WithInsecure())

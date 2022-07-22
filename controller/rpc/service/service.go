@@ -1,4 +1,4 @@
-package main
+package service
 
 import (
 	"context"
@@ -12,7 +12,7 @@ type SearchService struct {
 	
 }
 
-const PORT = "9001"
+const PORT = "9002"
 
 func (s *SearchService)Search(ctx context.Context,r *pb.SearchRequest)(*pb.SearchResponse,error)  {
 	request := r.GetRequest()
@@ -28,8 +28,8 @@ func (s *SearchService)List(ctx context.Context,r *pb.ListRequest)(*pb.ListRespo
 	}, nil
 }
 
-func main()  {
-	server := grpc.NewServer()
+// Register gRPC 服务注册
+func Register(server *grpc.Server) {
 	pb.RegisterSearchServiceServer(server, &SearchService{})
 	lis,err := net.Listen("tcp",":"+PORT)
 	if err != nil{
@@ -37,6 +37,7 @@ func main()  {
 	}
 	err = server.Serve(lis)
 	if err != nil {
-		return 
+		return
 	}
 }
+
