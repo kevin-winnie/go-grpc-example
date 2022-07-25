@@ -39,7 +39,6 @@ func NewUrlStore(filename string) *UrlStore {
 	if err := s.load(filename); err != nil {
 		log.Println("Error loading data in URLStore:", err)
 	}
-	s.Get(s.Get("94ws0"))
 	go s.saveLoop(filename)
 	return s
 }
@@ -49,6 +48,7 @@ func (s *UrlStore)saveLoop(filename string)  {
 	if err != nil {
 		log.Fatal("url store :", err)
 	}
+	
 	defer f.Close()
 	e := json.NewEncoder(f)
 	for {
